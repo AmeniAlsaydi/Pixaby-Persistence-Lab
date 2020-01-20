@@ -47,6 +47,7 @@
                                         <size key="customSize" width="235" height="201"/>
                                         <connections>
                                             <outlet property="photoImageView" destination="EhH-MO-76G" id="ADl-8U-vKX"/>
+                                            <segue destination="MKK-qp-boy" kind="presentation" id="2gW-3r-G7b"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -77,6 +78,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1927.5362318840582" y="233.70535714285714"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="r4c-N3-OER">
+            <objects>
+                <viewController id="MKK-qp-boy" customClass="DetailViewController" customModule="Pixaby_Persistence_Lab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Ua-yh-FsO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ged-7W-Q6g">
+                                <rect key="frame" x="19.5" y="50" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="9oX-vw-Oc3"/>
+                                    <constraint firstAttribute="height" constant="375" id="Xld-H0-dnV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Lh-86-MWL">
+                                <rect key="frame" x="20" y="566" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRR-Yj-XGs">
+                                <rect key="frame" x="20" y="499" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ged-7W-Q6g" firstAttribute="top" secondItem="kWD-CB-NEj" secondAttribute="top" constant="50" id="NsB-2Q-dib"/>
+                            <constraint firstItem="ged-7W-Q6g" firstAttribute="centerX" secondItem="0Ua-yh-FsO" secondAttribute="centerX" id="dtU-3X-2HW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kWD-CB-NEj"/>
+                    </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="ged-7W-Q6g" id="Mn7-fc-XGJ"/>
+                        <outlet property="userLabel" destination="hRR-Yj-XGs" id="uAx-tQ-VzQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nyz-10-RdO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2755" y="234"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="aQo-c9-Jik">
