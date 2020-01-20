@@ -13,6 +13,13 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var useridLabel: UILabel!
+    
+    @IBOutlet weak var favoritesLabel: UILabel!
+    @IBOutlet weak var likeLabel: UILabel!
+    @IBOutlet weak var viewsLabel: UILabel!
+    @IBOutlet weak var downloadsLabel: UILabel!
+    
     
     var photo: Photo?
     var buttonTag: Int?
@@ -34,6 +41,13 @@ class DetailViewController: UIViewController {
             fatalError("no photo or no button tag check segue")
         }
         userLabel.text = "User: \(photo.user)"
+        useridLabel.text = "User ID: \(photo.id)"
+        favoritesLabel.text = "\(photo.favorites) favorited"
+        likeLabel.text = "\(photo.likes) likes"
+        viewsLabel.text = "\(photo.views) views"
+        downloadsLabel.text = "\(photo.downloads) downloads"
+        
+        
         
         photoImageView.getImage(with: photo.largeImageURL) { (result) in
             switch result {

@@ -43,7 +43,9 @@ class SearchViewController: UIViewController {
         guard let detailVC = segue.destination as? DetailViewController, let cell = sender as? UICollectionViewCell, let indexPath = collectionView.indexPath(for: cell) else {
             fatalError("")
         }
-        
+        if segue.identifier == "searchSegue" {
+            detailVC.buttonTag = 1
+        }
         detailVC.photo = photos[indexPath.row]
         
     }
