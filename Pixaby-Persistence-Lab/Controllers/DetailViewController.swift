@@ -26,7 +26,6 @@ class DetailViewController: UIViewController {
     }
     
     
-    
     func updateUI() {
         guard let photo = photo else {
             fatalError("no photo check segue")

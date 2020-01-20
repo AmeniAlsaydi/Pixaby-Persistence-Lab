@@ -19,6 +19,8 @@
 		B73F19FA23D5FFAE00F05F7C /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73F19F923D5FFAE00F05F7C /* Photo.swift */; };
 		B73F19FC23D6088C00F05F7C /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73F19FB23D6088C00F05F7C /* PhotoCell.swift */; };
 		B73F19FE23D6352600F05F7C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73F19FD23D6352600F05F7C /* DetailViewController.swift */; };
+		B73F1A0123D63DBD00F05F7C /* FileManager+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73F1A0023D63DBD00F05F7C /* FileManager+Ext.swift */; };
+		B73F1A0323D63DEA00F05F7C /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73F1A0223D63DEA00F05F7C /* PersistenceHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		B73F19F923D5FFAE00F05F7C /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		B73F19FB23D6088C00F05F7C /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		B73F19FD23D6352600F05F7C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B73F1A0023D63DBD00F05F7C /* FileManager+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Ext.swift"; sourceTree = "<group>"; };
+		B73F1A0223D63DEA00F05F7C /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 				B73F19EB23D5FABD00F05F7C /* Secrets */,
 				B73F19F223D5FD0600F05F7C /* Controllers */,
 				B73F19F523D5FF5700F05F7C /* Networks */,
+				B73F19FF23D63CA600F05F7C /* Data Persistance */,
 				B73F19F823D5FF8F00F05F7C /* Model */,
 				B73F19DD23D5FA1A00F05F7C /* Main.storyboard */,
 				B73F19E523D5FA1F00F05F7C /* Info.plist */,
@@ -122,6 +127,15 @@
 				B73F19FB23D6088C00F05F7C /* PhotoCell.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B73F19FF23D63CA600F05F7C /* Data Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				B73F1A0023D63DBD00F05F7C /* FileManager+Ext.swift */,
+				B73F1A0223D63DEA00F05F7C /* PersistenceHelper.swift */,
+			);
+			path = "Data Persistance";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +218,8 @@
 				B73F19FC23D6088C00F05F7C /* PhotoCell.swift in Sources */,
 				B73F19FA23D5FFAE00F05F7C /* Photo.swift in Sources */,
 				B73F19F423D5FE1900F05F7C /* SearchViewController.swift in Sources */,
+				B73F1A0323D63DEA00F05F7C /* PersistenceHelper.swift in Sources */,
+				B73F1A0123D63DBD00F05F7C /* FileManager+Ext.swift in Sources */,
 				B73F19ED23D5FAE900F05F7C /* Secrets.swift in Sources */,
 				B73F19F723D5FF7E00F05F7C /* PhotosApiClient.swift in Sources */,
 				B73F19D823D5FA1A00F05F7C /* AppDelegate.swift in Sources */,
