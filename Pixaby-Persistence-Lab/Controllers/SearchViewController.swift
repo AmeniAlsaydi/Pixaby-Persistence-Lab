@@ -13,6 +13,13 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    var searchQuery = "fun" {
+        didSet {
+            DispatchQueue.main.async {
+                self.loadPhotos()
+            }
+        }
+    }
 
     var photos = [Photo]() {
         didSet {
@@ -24,7 +31,8 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        searchBar.delegate = self
+        collectionView.delegate = self
         collectionView.dataSource = self
         loadPhotos()
 
@@ -32,7 +40,7 @@ class SearchViewController: UIViewController {
     }
     
     func loadPhotos() {
-        PhotoApiClient.getPhotos(searchQuery: "fun") { (result) in
+        PhotoApiClient.getPhotos(searchQuery: searchQuery) { (result) in
             switch result {
             case .failure(let appError):
                 print("api client error: \(appError)")
@@ -41,8 +49,6 @@ class SearchViewController: UIViewController {
             }
         }
     }
-    
-
 }
 
 extension SearchViewController: UICollectionViewDataSource {
@@ -56,11 +62,54 @@ extension SearchViewController: UICollectionViewDataSource {
         }
         
         let photo = photos[indexPath.row]
-        
         cell.configureCell(with: photo.largeImageURL)
         
         return cell
     }
-    
-    
 }
+
+extension SearchViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // expecting a cg size which is a tuple of two values
+        
+        let interItemSpacing: CGFloat = 10 // space betweem items
+        let maxWidth = UIScreen.main.bounds.size.width // device width
+        
+        let numberOfItems: CGFloat = 2 // items
+        let totalSpacing: CGFloat = numberOfItems * interItemSpacing
+        
+        let itemWidth: CGFloat = (maxWidth - totalSpacing)/numberOfItems
+        
+        return CGSize(width: itemWidth, height: itemWidth)
+        
+        
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        // padding sround collectionview
+        return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        searchBar.resignFirstResponder()
+        
+        guard let searchText = searchBar.text else {
+            return
+        }
+        
+        guard !searchText.isEmpty else {
+            loadPhotos()
+            return
+        }
+        
+        searchQuery = searchText.lowercased().addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "fun"
+    }
+}
+

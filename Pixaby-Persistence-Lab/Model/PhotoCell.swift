@@ -13,6 +13,13 @@ class PhotoCell: UICollectionViewCell {
     
      @IBOutlet weak var photoImageView: UIImageView!
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        photoImageView.layer.cornerRadius = photoImageView.frame.height/13
+
+    }
+    
     public func configureCell(with photoUrl: String) {
         photoImageView.getImage(with: photoUrl) { (result) in
             switch result {
