@@ -12,7 +12,7 @@ import NetworkHelper
 struct PhotoApiClient {
     static func getPhotos(searchQuery: String, completion: @escaping (Result<[Photo], AppError>)-> ()) {
         
-        let endpoint = "https://pixabay.com/api/?key=\(Secrets.apiKey)=\(searchQuery)"
+        let endpoint = "https://pixabay.com/api/?key=\(Secrets.apiKey)&q=\(searchQuery)"
         
         guard let url = URL(string: endpoint) else {
             completion(.failure(.badURL(endpoint)))
