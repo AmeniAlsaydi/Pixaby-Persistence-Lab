@@ -12,12 +12,13 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var userLabel: UILabel!
-    
+    @IBOutlet weak var favoriteButton: UIButton!
     var photo: Photo?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        print(FileManager.getDocumentsDirectory())
 
     }
     
@@ -44,6 +45,28 @@ class DetailViewController: UIViewController {
             }
         }
         
+        
+    }
+    
+    @IBAction func favoriteButtonPressed(_ sender: UIButton) {
+        
+        guard let photo = photo else {
+            fatalError("no photo check segue")
+        }
+        
+        // change to filled heart:
+        
+        let heartImage = UIImage(systemName: "heart.fill")
+        favoriteButton.setImage(heartImage, for: .normal)
+        sender.isEnabled = false
+        
+        // save/persist photo
+        
+        do {
+            try PersistenceHelper.create(photo: photo)
+        } catch {
+            print("error saving event with error: \(error)")
+        }
         
     }
     

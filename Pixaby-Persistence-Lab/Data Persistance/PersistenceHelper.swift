@@ -50,6 +50,7 @@ class PersistenceHelper {
     
     static func create(photo: Photo) throws { // mark our function as a throwing
         
+        
         // append new photo to the photos array
         favorites.append(photo)
         do {
@@ -72,9 +73,7 @@ class PersistenceHelper {
             
             if let data = FileManager.default.contents(atPath: url.path) {
                 do {
-                    let search = try PropertyListDecoder().decode(PhotoSearch.self, from: data)
-                    favorites = search.hits
-                    
+                    favorites = try PropertyListDecoder().decode([Photo].self, from: data)
                 } catch {
                     throw DataPersiatanceError.decodingError(error)
                     

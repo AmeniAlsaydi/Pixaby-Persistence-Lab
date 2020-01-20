@@ -21,6 +21,7 @@
 		B73F19FE23D6352600F05F7C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73F19FD23D6352600F05F7C /* DetailViewController.swift */; };
 		B73F1A0123D63DBD00F05F7C /* FileManager+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73F1A0023D63DBD00F05F7C /* FileManager+Ext.swift */; };
 		B73F1A0323D63DEA00F05F7C /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73F1A0223D63DEA00F05F7C /* PersistenceHelper.swift */; };
+		B73F1A0523D648D700F05F7C /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73F1A0423D648D700F05F7C /* FavoritesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		B73F19FD23D6352600F05F7C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B73F1A0023D63DBD00F05F7C /* FileManager+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Ext.swift"; sourceTree = "<group>"; };
 		B73F1A0223D63DEA00F05F7C /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
+		B73F1A0423D648D700F05F7C /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +74,7 @@
 		B73F19D623D5FA1A00F05F7C /* Pixaby-Persistence-Lab */ = {
 			isa = PBXGroup;
 			children = (
-				B73F19F123D5FCC500F05F7C /* Supporting */,
+				B73F19F123D5FCC500F05F7C /* Supporting files */,
 				B73F19EB23D5FABD00F05F7C /* Secrets */,
 				B73F19F223D5FD0600F05F7C /* Controllers */,
 				B73F19F523D5FF5700F05F7C /* Networks */,
@@ -92,7 +94,7 @@
 			path = Secrets;
 			sourceTree = "<group>";
 		};
-		B73F19F123D5FCC500F05F7C /* Supporting */ = {
+		B73F19F123D5FCC500F05F7C /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
 				B73F19D923D5FA1A00F05F7C /* SceneDelegate.swift */,
@@ -100,7 +102,7 @@
 				B73F19D723D5FA1A00F05F7C /* AppDelegate.swift */,
 				B73F19E023D5FA1F00F05F7C /* Assets.xcassets */,
 			);
-			path = Supporting;
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 		B73F19F223D5FD0600F05F7C /* Controllers */ = {
@@ -108,6 +110,7 @@
 			children = (
 				B73F19F323D5FE1900F05F7C /* SearchViewController.swift */,
 				B73F19FD23D6352600F05F7C /* DetailViewController.swift */,
+				B73F1A0423D648D700F05F7C /* FavoritesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				B73F1A0323D63DEA00F05F7C /* PersistenceHelper.swift in Sources */,
 				B73F1A0123D63DBD00F05F7C /* FileManager+Ext.swift in Sources */,
 				B73F19ED23D5FAE900F05F7C /* Secrets.swift in Sources */,
+				B73F1A0523D648D700F05F7C /* FavoritesViewController.swift in Sources */,
 				B73F19F723D5FF7E00F05F7C /* PhotosApiClient.swift in Sources */,
 				B73F19D823D5FA1A00F05F7C /* AppDelegate.swift in Sources */,
 				B73F19DA23D5FA1A00F05F7C /* SceneDelegate.swift in Sources */,
