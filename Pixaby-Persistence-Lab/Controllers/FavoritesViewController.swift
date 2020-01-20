@@ -29,6 +29,20 @@ class FavoritesViewController: UIViewController {
 
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let detailVC = segue.destination as? DetailViewController, let cell = sender as? UICollectionViewCell, let indexPath = collectionView.indexPath(for: cell) else {
+            fatalError("")
+        }
+        
+        if segue.identifier == "favoriteSegue" {
+            detailVC.buttonTag = 2
+        }
+        
+        detailVC.photo = favorites[indexPath.row]
+        
+    }
+    
     func getFavs() {
         
         //get favs from docs using helper function loadFavorites()

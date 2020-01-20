@@ -13,7 +13,9 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
+    
     var photo: Photo?
+    var buttonTag: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +30,8 @@ class DetailViewController: UIViewController {
     
     
     func updateUI() {
-        guard let photo = photo else {
-            fatalError("no photo check segue")
+        guard let photo = photo, let buttontag = buttonTag else {
+            fatalError("no photo or no button tag check segue")
         }
         userLabel.text = "User: \(photo.user)"
         
@@ -45,7 +47,11 @@ class DetailViewController: UIViewController {
             }
         }
         
-        
+        if buttontag == 2 {
+            let heartImage = UIImage(systemName: "heart.fill")
+            favoriteButton.setImage(heartImage, for: .normal)
+            favoriteButton.isEnabled = false
+        }
     }
     
     @IBAction func favoriteButtonPressed(_ sender: UIButton) {
