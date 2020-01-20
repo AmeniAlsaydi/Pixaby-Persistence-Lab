@@ -3,29 +3,34 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		B73F19D823D5FA1A00F05F7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73F19D723D5FA1A00F05F7C /* AppDelegate.swift */; };
 		B73F19DA23D5FA1A00F05F7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73F19D923D5FA1A00F05F7C /* SceneDelegate.swift */; };
-		B73F19DC23D5FA1A00F05F7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73F19DB23D5FA1A00F05F7C /* ViewController.swift */; };
 		B73F19DF23D5FA1A00F05F7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B73F19DD23D5FA1A00F05F7C /* Main.storyboard */; };
 		B73F19E123D5FA1F00F05F7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B73F19E023D5FA1F00F05F7C /* Assets.xcassets */; };
 		B73F19E423D5FA1F00F05F7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B73F19E223D5FA1F00F05F7C /* LaunchScreen.storyboard */; };
 		B73F19ED23D5FAE900F05F7C /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73F19EC23D5FAE900F05F7C /* Secrets.swift */; };
+		B73F19F023D5FC6200F05F7C /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = B73F19EF23D5FC6200F05F7C /* ImageKit */; };
+		B73F19F423D5FE1900F05F7C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73F19F323D5FE1900F05F7C /* SearchViewController.swift */; };
+		B73F19F723D5FF7E00F05F7C /* PhotosApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73F19F623D5FF7E00F05F7C /* PhotosApiClient.swift */; };
+		B73F19FA23D5FFAE00F05F7C /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73F19F923D5FFAE00F05F7C /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B73F19D423D5FA1A00F05F7C /* Pixaby-Persistence-Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pixaby-Persistence-Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B73F19D723D5FA1A00F05F7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B73F19D923D5FA1A00F05F7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B73F19DB23D5FA1A00F05F7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B73F19DE23D5FA1A00F05F7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B73F19E023D5FA1F00F05F7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B73F19E323D5FA1F00F05F7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B73F19E523D5FA1F00F05F7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B73F19EC23D5FAE900F05F7C /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		B73F19F323D5FE1900F05F7C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		B73F19F623D5FF7E00F05F7C /* PhotosApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosApiClient.swift; sourceTree = "<group>"; };
+		B73F19F923D5FFAE00F05F7C /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B73F19F023D5FC6200F05F7C /* ImageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +64,12 @@
 		B73F19D623D5FA1A00F05F7C /* Pixaby-Persistence-Lab */ = {
 			isa = PBXGroup;
 			children = (
-				B73F19D723D5FA1A00F05F7C /* AppDelegate.swift */,
+				B73F19F123D5FCC500F05F7C /* Supporting */,
 				B73F19EB23D5FABD00F05F7C /* Secrets */,
-				B73F19D923D5FA1A00F05F7C /* SceneDelegate.swift */,
-				B73F19DB23D5FA1A00F05F7C /* ViewController.swift */,
+				B73F19F223D5FD0600F05F7C /* Controllers */,
+				B73F19F523D5FF5700F05F7C /* Networks */,
+				B73F19F823D5FF8F00F05F7C /* Model */,
 				B73F19DD23D5FA1A00F05F7C /* Main.storyboard */,
-				B73F19E023D5FA1F00F05F7C /* Assets.xcassets */,
-				B73F19E223D5FA1F00F05F7C /* LaunchScreen.storyboard */,
 				B73F19E523D5FA1F00F05F7C /* Info.plist */,
 			);
 			path = "Pixaby-Persistence-Lab";
@@ -76,6 +81,41 @@
 				B73F19EC23D5FAE900F05F7C /* Secrets.swift */,
 			);
 			path = Secrets;
+			sourceTree = "<group>";
+		};
+		B73F19F123D5FCC500F05F7C /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				B73F19D923D5FA1A00F05F7C /* SceneDelegate.swift */,
+				B73F19E223D5FA1F00F05F7C /* LaunchScreen.storyboard */,
+				B73F19D723D5FA1A00F05F7C /* AppDelegate.swift */,
+				B73F19E023D5FA1F00F05F7C /* Assets.xcassets */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		B73F19F223D5FD0600F05F7C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B73F19F323D5FE1900F05F7C /* SearchViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B73F19F523D5FF5700F05F7C /* Networks */ = {
+			isa = PBXGroup;
+			children = (
+				B73F19F623D5FF7E00F05F7C /* PhotosApiClient.swift */,
+			);
+			path = Networks;
+			sourceTree = "<group>";
+		};
+		B73F19F823D5FF8F00F05F7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B73F19F923D5FFAE00F05F7C /* Photo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,6 +134,9 @@
 			dependencies = (
 			);
 			name = "Pixaby-Persistence-Lab";
+			packageProductDependencies = (
+				B73F19EF23D5FC6200F05F7C /* ImageKit */,
+			);
 			productName = "Pixaby-Persistence-Lab";
 			productReference = B73F19D423D5FA1A00F05F7C /* Pixaby-Persistence-Lab.app */;
 			productType = "com.apple.product-type.application";
@@ -122,6 +165,9 @@
 				Base,
 			);
 			mainGroup = B73F19CB23D5FA1A00F05F7C;
+			packageReferences = (
+				B73F19EE23D5FC6200F05F7C /* XCRemoteSwiftPackageReference "ImageKit" */,
+			);
 			productRefGroup = B73F19D523D5FA1A00F05F7C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -149,8 +195,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B73F19DC23D5FA1A00F05F7C /* ViewController.swift in Sources */,
+				B73F19FA23D5FFAE00F05F7C /* Photo.swift in Sources */,
+				B73F19F423D5FE1900F05F7C /* SearchViewController.swift in Sources */,
 				B73F19ED23D5FAE900F05F7C /* Secrets.swift in Sources */,
+				B73F19F723D5FF7E00F05F7C /* PhotosApiClient.swift in Sources */,
 				B73F19D823D5FA1A00F05F7C /* AppDelegate.swift in Sources */,
 				B73F19DA23D5FA1A00F05F7C /* SceneDelegate.swift in Sources */,
 			);
@@ -350,6 +398,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B73F19EE23D5FC6200F05F7C /* XCRemoteSwiftPackageReference "ImageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexpaul/ImageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B73F19EF23D5FC6200F05F7C /* ImageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B73F19EE23D5FC6200F05F7C /* XCRemoteSwiftPackageReference "ImageKit" */;
+			productName = ImageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B73F19CC23D5FA1A00F05F7C /* Project object */;
 }
