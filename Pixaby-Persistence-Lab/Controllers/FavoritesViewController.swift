@@ -15,6 +15,7 @@ class FavoritesViewController: UIViewController {
     var favorites = [Photo]() {
         didSet {
             DispatchQueue.main.async {
+                self.getFavs()
                 self.collectionView.reloadData()
             }
             
